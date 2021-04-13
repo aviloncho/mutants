@@ -36,6 +36,21 @@ class TestMutant(unittest.TestCase):
 
         self.assertTrue(mutant.is_mutant(dna))
 
+    def test_is_mutant_1_seq(self):
+        """
+        Test human DNA with 1 sequence (Vertical).
+        """
+        dna = [
+            'ATGCGA',
+            'CCGTTC',
+            'TTATGG',
+            'AGAAGG',
+            'CAGCTG',
+            'TCACTG'
+        ]
+
+        self.assertFalse(mutant.is_mutant(dna))
+
     def test_is_mutant_human(self):
         """
         Test human DNA without sequences.
