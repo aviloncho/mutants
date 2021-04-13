@@ -1,11 +1,11 @@
 import time
 import mutant
+from tests import fixtures
 
 
 def main():
-    dna = ['ATGCGA', 'CAGTGC', 'TTATGT', 'AGAAGG', 'CCCCTA', 'TCACTG']
 
-    print(mutant.is_mutant(dna))
+    print(mutant.is_mutant(fixtures.EXAMPLE))
 
 
 if __name__ == '__main__':
