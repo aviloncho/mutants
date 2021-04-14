@@ -12,13 +12,21 @@ def get_dnas_analysis(db: Session, skip: int = 0, limit: int = 100):
 
 
 def get_dna_analysis(db: Session,
-                     human_dna: schemas.HumanDNA,):
+                     human_dna: schemas.HumanDNA):
     """Get specific DnaAnalysis stored in the database."""
     str_dna, hash_dna = hash_utils.hash_md5(human_dna)
 
+    dna_analysis = get_dna_analysis_by_hash(db, hash_dna.hexdigest())
+
+    return dna_analysis
+
+
+def get_dna_analysis_by_hash(db: Session,
+                             hash: str):
+    """Get specific DnaAnalysis stored in the database."""
     try:
         dna_analysis = db.query(models.DnaAnalysis).filter_by(
-            dna_hash=hash_dna.hexdigest()
+            dna_hash=hash
         ).first()
     except NoResultFound:
         dna_analysis = None

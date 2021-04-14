@@ -13,6 +13,10 @@ class HumanDNA(BaseModel):
         orm_mode = True
 
 
+class HumanDNAResponse(HumanDNA):
+    dna_hash: str
+
+
 class DnaAnalysis(BaseModel):
     """
     DnaAnalysis model. Represent DnaAnalysis database model class.
