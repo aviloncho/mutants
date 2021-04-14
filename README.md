@@ -2,11 +2,17 @@
 <a href="https://travis-ci.com/aviloncho/mutants" target="_blank">
     <img src="https://travis-ci.com/aviloncho/mutants.svg?branch=main" alt="build">
 </a>
+</p>
 
 # mutants
 Find mutants analyzing human DNA sequences.
 
 ---
+
+## Test Coverage
+- Mutant Algorythm Coverage: [96.25 %](coverage-api.json)
+
+- API Coverage: [95.45 %](coverage-mutant-algorythm.json)
 
 ## Live API
 
