@@ -10,8 +10,6 @@ script:
   - python -m unittest discover -s tests
 deploy:
   provider: heroku
-  skip_cleanup: true
-  keep_history: true
   api_key: $HEROKU_API_KEY
   app: mutants-dna-api
   on:

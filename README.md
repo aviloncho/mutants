@@ -1,5 +1,20 @@
+<p align="center">
+<a href="https://travis-ci.com/aviloncho/mutants" target="_blank">
+    <img src="https://travis-ci.com/aviloncho/mutants.svg?branch=main" alt="build">
+</a>
+
 # mutants
-Find mutants
+Find mutants analyzing human DNA sequences.
+
+---
+
+## Live API
+
+- [Live API](https://mutants-dna-api.herokuapp.com/)
+
+- [API Documentation](https://mutants-dna-api.herokuapp.com/docs)
+
+---
 
 ## Install
 
@@ -31,4 +46,6 @@ $ pip install -r requirements.txt
 ```bash
 $ uvicorn main_api:app --reload
 ```
-> It should be runing on http://127.0.0.1:8000
+> It should be runing on your [localhost](http://127.0.0.1:8000).
+>
+> See [local documentation](http://127.0.0.1:8000/docs).
