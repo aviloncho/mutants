@@ -31,7 +31,6 @@ async def root():
 @app.post("/mutant/")
 async def analyze_dna(dna: schemas.HumanDNA,
                       response: Response,
-                      response_model=schemas.HumanDNAResponse,
                       db: Session = Depends(get_db)):
     """
     Check if DNA is from a mutant human.
